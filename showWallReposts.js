@@ -1,6 +1,6 @@
 var bgFlag = 0;
 var groupId = 0;
-var counter = 1;
+var counter = 0;
 var posts = [];
 try {
     groupId = document.getElementById("page_wall_header").href.split("wall")[1].split("?")[0];
@@ -37,7 +37,7 @@ var foundRepost = function (url) {
     onFail: function(text) { console.error(text); }});
 };
 var loader = function (offset) {
-    if (offset > 101) return addPosts();
+    if (offset > 101) return;
     ajax.post('al_wall.php', {act: 'get_wall', owner_id: groupId, offset: offset, type: "own", fixed: ''}, {
         onDone: function (rows, names) {
             var tmp = document.createElement("div");
