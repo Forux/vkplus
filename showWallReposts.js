@@ -16,7 +16,8 @@ var addPosts = function () {
     for (var x in posts) {
         var node = posts[x][1];
         node.style.borderBottom = "2px dashed #DAE1E8";
-        node.style.borderLeft = "5px solid " + (bgFlag ? "rgb(247, 247, 255)" : "rgb(217, 224, 231)");
+        node.style.borderLeft = "3px solid " + (bgFlag ? "rgb(247, 247, 255)" : "rgb(217, 224, 231)");
+        node.style.borderRight = node.style.borderLeft;
         bgFlag = !bgFlag;
         document.getElementById("wrap1").appendChild(node);
     }
@@ -29,8 +30,6 @@ var foundRepost = function (url) {
         tmp.innerHTML = html;
         var node = tmp.children[0].children[2].children[0];
         var num = url.split("_");
-        debugger;
-        console.log(+num[num.length - 1]);
         posts.push([+num[num.length - 1], node]);
         addPosts();
     },
