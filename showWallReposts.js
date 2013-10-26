@@ -7,9 +7,6 @@ try {
 } catch (e) {
     console.error(e);
 }
-if (!groupId) {
-    alert("Скрипт: уважаемый Пользователь! Перейдите на персональную страницу или страницу группы, не вижу стену с сообщениями.")
-}
 var addPosts = function () {
     if (--counter !== 0) return;
     console.log("show");
@@ -61,4 +58,10 @@ var loader = function (offset) {
         }
     });
 }
-loader(0);
+
+if (!groupId) {
+    alert("Скрипт: уважаемый Пользователь! Перейдите на персональную страницу или страницу группы, не вижу стену с сообщениями.")
+    
+} else {
+    loader(0);
+}
