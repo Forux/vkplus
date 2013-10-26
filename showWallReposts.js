@@ -36,7 +36,6 @@ var foundRepost = function (url) {
     },
     onFail: function(text) { console.error(text); }});
 };
-document.getElementById("wrap1").innerHTML = "";
 var loader = function (offset) {
     if (offset > 101) return addPosts();
     ajax.post('al_wall.php', {act: 'get_wall', owner_id: groupId, offset: offset, type: "own", fixed: ''}, {
@@ -62,5 +61,6 @@ var loader = function (offset) {
 if (!groupId) {
     alert("Скрипт: уважаемый Пользователь! Перейдите на персональную страницу или страницу группы, не вижу стену с сообщениями.")
 } else {
+    document.getElementById("wrap1").innerHTML = "";
     loader(0);
 }
