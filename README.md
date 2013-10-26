@@ -18,4 +18,4 @@ vkplus
 
 ![alt tag](http://i.imgur.com/kAkb7zR.png)
 
-![alt tag](http://i.imgur.com/47lSsL5.png)
+![alt tag](http://i.imgur.com/XuDzMfv.png)
