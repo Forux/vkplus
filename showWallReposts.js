@@ -9,7 +9,6 @@ try {
 }
 var addPosts = function () {
     if (--counter !== 0) return;
-    console.log("show");
     posts.sort(function (a, b) {
         return b[0] - a[0];
     });
